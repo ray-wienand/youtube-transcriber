@@ -2,7 +2,6 @@ import os
 
 # YouTube
 from pytube import YouTube
-from youtube_transcript_api import YouTubeTranscriptApi
 
 # Create folder if not exist
 os.makedirs("backend/audio", exist_ok=True)

@@ -1,8 +1,11 @@
 # Youtube Transcriber
 
 ---
-YouTube transcriber is an AI app that extracts the audio from a given YouTube video.
-It then uses the extracted audio file to transcribe it into a readable text format. 
+YouTube transcriber is an AI app that extracts the audio from a given YouTube video. \
+It then uses the extracted audio file to transcribe it into a readable text format. \
+There are two options:
+1. Use openai-whisper to extract the video's audio and then transcribe it.
+2. Download the YouTube transcript and remove the timestamps.
 
 ## Tech Stack
 
@@ -38,10 +41,18 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-### Run the transcriber
+### Run the Whisper transcriber
 
 ```shell
 python3 backend/whisper_transcribe.py 
+```
+
+### Get the transcript directly from YouTube
+This module downloads the YouTube transcript and removes the timestamps.
+It then concatenates the te text into one paragraph.
+
+```shell
+python3 backend/yt_transcript.py 
 ```
 ### Workflow
 
