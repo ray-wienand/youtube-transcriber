@@ -1,9 +1,4 @@
-# Python Packages
-python-dotenv
 
 # YouTube Packages
 youtube_transcript_api # Gets the transcript directly from YouTube.
 pytube # This allows us to work with the YouTube video.
-
-# AI Packages
-openai-whisper # Used for the transcribing

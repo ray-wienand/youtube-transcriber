@@ -1,5 +1,7 @@
 import os
 import re
+
+# We need pythube to 1st get the video id.
 from pytube import YouTube
 from youtube_transcript_api import YouTubeTranscriptApi
 
@@ -37,6 +39,8 @@ def yt_transcribe(youtube_url):
         Special note: This was a pain in the freaking ass to get right. 
         Even ChatGpt struggled to get it right :-)
         It would keep on saving it with ..txt instead of .txt
+
+        I used this method to get rid of the spaces and replace them with underscore. makes it better for referencing later.
         '''
         safe_title = re.sub(r'[\\/*?:"<>|]+', '_', yt.title)
         # Replace multiple spaces with a single underscore
